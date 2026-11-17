@@ -38,4 +38,4 @@ App Next.js de huerto hidropónico: catálogo de cultivos, beneficios y comparad
 - **Prompt:** "Crea las páginas /sistemas y /beneficios con tarjetas, y ayúdame a subir el proyecto a GitHub y desplegarlo en Vercel."
 - **Resultado:** 4 rutas funcionando, repositorio público y app desplegada.
 - **Decisión técnica:** no definí NEXT_PUBLIC_API_URL en Vercel para que la app use rutas relativas.
-- **Problemas y cómo se resolvieron:** (anota aquí lo que te pase, o "Ninguno").
+- **Ninguno.
