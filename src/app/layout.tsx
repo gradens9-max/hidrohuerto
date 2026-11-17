@@ -20,12 +20,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={geist.variable}>
-        <div className="min-h-screen bg-green-50 text-gray-900">
+        <div className="min-h-screen bg-[#f6f2ea] text-madera-900">
           <Suspense fallback={null}>
             <Navbar />
           </Suspense>
           <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
-          <footer className="border-t border-green-200 py-6 text-center text-sm text-green-800">
+          <footer className="border-t border-madera-200 py-6 text-center text-sm text-madera-700">
             HidroHuerto · Proyecto de Vibe Coding
           </footer>
         </div>

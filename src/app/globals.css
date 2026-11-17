@@ -24,3 +24,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@theme {
+  /* Verde salvia (reemplaza al verde por defecto) */
+  --color-green-50: #f3f5f0;
+  --color-green-100: #e4e9de;
+  --color-green-200: #cbd5c2;
+  --color-green-300: #adbba1;
+  --color-green-400: #8a9d7c;
+  --color-green-500: #6f8460;
+  --color-green-600: #627058;
+  --color-green-700: #4b5c41;
+  --color-green-800: #3c4a35;
+  --color-green-900: #2f3a2b;
+
+  /* Madera */
+  --color-madera-50: #faf5f0;
+  --color-madera-100: #f0e4d8;
+  --color-madera-200: #ddc6ad;
+  --color-madera-300: #c4a07c;
+  --color-madera-400: #a67c58;
+  --color-madera-500: #8a5f40;
+  --color-madera-600: #6f4a33;
+  --color-madera-700: #5a3b29;
+  --color-madera-800: #472f21;
+  --color-madera-900: #352318;
+}
