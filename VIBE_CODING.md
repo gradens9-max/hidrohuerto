@@ -33,3 +33,9 @@ App Next.js de huerto hidropónico: catálogo de cultivos, beneficios y comparad
 - **Resultado:** Client Component `CatalogoCultivos` dentro de una página Server Component, más `loading.tsx` y `error.tsx` de la ruta. Probado en localhost con los 8 cultivos, buscador y filtros funcionando.
 - **Decisión técnica:** el filtro por categoría se pide a la API con `?categoria=` y el buscador filtra en el cliente. Definí una paleta verde salvia + madera + crema en globals.css con `@theme`, para cambiar los colores de toda la app sin tocar cada componente.
 - **Problemas y cómo se resolvieron:** al crear `CatalogoCultivos.tsx` escribí mal el nombre del archivo. Next.js mostró "Module not found: Can't resolve '@/components/CatalogoCultivos'" y VS Code marcó el mismo error en page.tsx. Revisé el tsconfig.json (el alias `@/*` estaba bien), corregí el nombre del archivo y limpié la caché con `Remove-Item -Recurse -Force .next`.
+
+## Iteración 5: Sistemas, beneficios y despliegue
+- **Prompt:** "Crea las páginas /sistemas y /beneficios con tarjetas, y ayúdame a subir el proyecto a GitHub y desplegarlo en Vercel."
+- **Resultado:** 4 rutas funcionando, repositorio público y app desplegada.
+- **Decisión técnica:** no definí NEXT_PUBLIC_API_URL en Vercel para que la app use rutas relativas.
+- **Problemas y cómo se resolvieron:** (anota aquí lo que te pase, o "Ninguno").
