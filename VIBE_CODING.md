@@ -21,3 +21,9 @@ App Next.js de huerto hidropónico: catálogo de cultivos, beneficios y comparad
 - **Resultado:** tres Route Handlers probados en el navegador (200, 200, 200, 404 y 200 según lo esperado).
 - **Decisión técnica:** en Next 16 los `params` de rutas dinámicas son una Promise, por eso se usa `await params`. Se agregó `!.env.example` al .gitignore para que la plantilla sí se suba al repositorio.
 - **Problemas y cómo se resolvieron:** los archivos .env quedaron vacíos al crearlos y los detecté al revisar las capturas; pegué la variable NEXT_PUBLIC_API_URL y reinicié el servidor para que Next la leyera.
+
+## Iteración 3: Layout, Navbar e Inicio
+- **Prompt:** "Crea un layout con barra de navegación responsive (Inicio, Beneficios, Cultivos, Sistemas) y una página de inicio con un banner y 3 cultivos destacados, usando Tailwind en tonos verdes."
+- **Resultado:** componente Navbar (Client Component), layout y página de inicio (Server Component). Probado en localhost, se ve correcto.
+- **Decisión técnica:** la Navbar es Client Component porque usa `usePathname` para resaltar el enlace activo; el resto son Server Components. Como el proyecto tiene Cache Components activado, la Navbar va envuelta en `Suspense`.
+- **Problemas y cómo se resolvieron:** Ninguno.
