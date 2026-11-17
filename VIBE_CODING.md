@@ -38,4 +38,4 @@ App Next.js de huerto hidropónico: catálogo de cultivos, beneficios y comparad
 - **Prompt:** "Crea las páginas /sistemas y /beneficios con tarjetas, y ayúdame a subir el proyecto a GitHub y desplegarlo en Vercel."
 - **Resultado:** 4 rutas funcionando, repositorio público y app desplegada.
 - **Decisión técnica:** no definí NEXT_PUBLIC_API_URL en Vercel para que la app use rutas relativas.
-- **Ninguno.
+- **Problemas y cómo se resolvieron:** Tuve un error con el origen remoto en Git (`remote origin already exists` / `Not Found`) que resolví actualizando la URL remota, e instalé la aplicación de GitHub en Vercel para autorizar el repositorio y completar el despliegue con éxito.
