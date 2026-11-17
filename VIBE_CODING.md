@@ -27,3 +27,9 @@ App Next.js de huerto hidropónico: catálogo de cultivos, beneficios y comparad
 - **Resultado:** componente Navbar (Client Component), layout y página de inicio (Server Component). Probado en localhost, se ve correcto.
 - **Decisión técnica:** la Navbar es Client Component porque usa `usePathname` para resaltar el enlace activo; el resto son Server Components. Como el proyecto tiene Cache Components activado, la Navbar va envuelta en `Suspense`.
 - **Problemas y cómo se resolvieron:** Ninguno.
+
+## Iteración 4: Página de cultivos
+- **Prompt:** "Crea la página /cultivos con buscador por nombre y filtro por categoría. Debe consumir /api/cultivos, manejar estados de carga y error, y tener loading.tsx y error.tsx."
+- **Resultado:** Client Component `CatalogoCultivos` dentro de una página Server Component, más `loading.tsx` y `error.tsx` de la ruta. Probado en localhost con los 8 cultivos, buscador y filtros funcionando.
+- **Decisión técnica:** el filtro por categoría se pide a la API con `?categoria=` y el buscador filtra en el cliente. Definí una paleta verde salvia + madera + crema en globals.css con `@theme`, para cambiar los colores de toda la app sin tocar cada componente.
+- **Problemas y cómo se resolvieron:** al crear `CatalogoCultivos.tsx` escribí mal el nombre del archivo. Next.js mostró "Module not found: Can't resolve '@/components/CatalogoCultivos'" y VS Code marcó el mismo error en page.tsx. Revisé el tsconfig.json (el alias `@/*` estaba bien), corregí el nombre del archivo y limpié la caché con `Remove-Item -Recurse -Force .next`.
