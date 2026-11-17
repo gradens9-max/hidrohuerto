@@ -15,3 +15,9 @@ App Next.js de huerto hidropónico: catálogo de cultivos, beneficios y comparad
 - **Resultado:** Claude generó `src/types/index.ts`, `src/data/cultivos.ts` y `src/data/sistemas.ts`. Los creé a mano en VS Code siguiendo sus instrucciones.
 - **Decisión técnica:** los textos son originales y los valores (pH, días a cosecha) son aproximados. Evité copiar el ebook de hidroponía porque tiene derechos reservados. Usé tipos de TypeScript estrictos, sin `any`.
 - **Problemas y cómo se resolvieron:** Ninguno hasta ahora.
+
+## Iteración 2: API con Route Handlers
+- **Prompt:** "Crea Route Handlers: GET /api/cultivos (con filtro ?categoria=), GET /api/cultivos/[id] (404 con JSON si no existe) y GET /api/sistemas. Crea .env.local y .env.example."
+- **Resultado:** tres Route Handlers probados en el navegador (200, 200, 200, 404 y 200 según lo esperado).
+- **Decisión técnica:** en Next 16 los `params` de rutas dinámicas son una Promise, por eso se usa `await params`. Se agregó `!.env.example` al .gitignore para que la plantilla sí se suba al repositorio.
+- **Problemas y cómo se resolvieron:** los archivos .env quedaron vacíos al crearlos y los detecté al revisar las capturas; pegué la variable NEXT_PUBLIC_API_URL y reinicié el servidor para que Next la leyera.
